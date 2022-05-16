@@ -46,7 +46,7 @@ $aop = [];
 
 
 <input type="date" name="dia">
-<input type="submit" value="Seleccionar">
+<input type="submit" value="Seleccionar Fecha">
 </form>  
 
 
