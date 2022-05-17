@@ -36,14 +36,7 @@ $aop = [];
 
 <select hidden name="AOP" required="required" id="AOPe">
     <option value=<?= $_SESSION['AOPe'] ?>></option>
-
-
-
-
 </select>
-
-
-
 
 <input type="date" name="dia">
 <input type="submit" value="Seleccionar Fecha">
@@ -93,7 +86,7 @@ $aop = [];
   if ( isset($cuenta) && $cuenta > 0) {
 
   foreach ($internados as $internado): ?>
-  <tr>
+  <tr class="w3-hover-pale-green">
     <td><?= htmlspecialchars($internado['ApeNom'], ENT_QUOTES, 'UTF-8'); ?></td>
     <td><?= htmlspecialchars($internado['Domicilio'], ENT_QUOTES, 'UTF-8'); ?></td>
     <td><?= htmlspecialchars($internado['Ingreso'], ENT_QUOTES, 'UTF-8'); ?></td>

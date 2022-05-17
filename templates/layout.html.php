@@ -1,8 +1,5 @@
-<?php 
-if (is_null($_SESSION['name'])) {
-session_start();
-}
-?>
+
+
 <!DOCTYPE html>
 <html style=" height:100%;">
 <head>
@@ -52,12 +49,8 @@ session_start();
 	<div class="w3-bar w3-border w3-light-grey">
 
 			<a href="../include/inicio.php" class="w3-bar-item w3-button">Inicio</a>
+			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
 	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte internación</a>
-			
-
-			
-
-	
 			<a href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a></li>
 		
 	</div>

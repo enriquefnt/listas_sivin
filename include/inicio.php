@@ -1,3 +1,8 @@
+
+<?php 
+session_start();
+?>
+
 <?php
 $title = 'Registro Sec. Descubiertos';
 ob_start();

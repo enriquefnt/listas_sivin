@@ -4,9 +4,6 @@ include __DIR__ . '/../include/funciones.php';
 
  $result = findAll($connect, 'AREAS','Ao_Nom');
 
-
-
-
    try {
      if (isset($_POST['AOP'])&&isset($_POST['dia'])) {
       
