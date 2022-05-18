@@ -4,7 +4,7 @@ include __DIR__ . '/../include/funciones.php';
 ?>
 
 	<?php
-	
+	$title = 'Nominal';
 	$result = findAll($connect, 'AREAS','Ao_Nom');
 try {
 
@@ -17,7 +17,7 @@ try {
 		//$sql='call MSP_NUTRICION.nominal(8); ';	
 		$casos = $connect->query($sql);
 		$cuenta = $casos->rowCount();
-		$title = 'Listado';
+		
 }
 ob_start();
 
