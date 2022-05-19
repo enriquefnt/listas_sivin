@@ -50,7 +50,7 @@ session_start();
    
     </tr>
   <?php endforeach; ?>
-  <h4>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp; <button type="submit" formaction="nominal.php">Vovler</button>  </h4>
+  <h4>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp;  <input type="button" value="Página anterior" onClick="history.go(-1);"> </h4>
   
   <?php endif; ?>
   </tbody>
