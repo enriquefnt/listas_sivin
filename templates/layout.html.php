@@ -1,4 +1,6 @@
-
+<?php
+//session_start();
+?>
 
 <!DOCTYPE html>
 <html style=" height:100%;">
@@ -71,7 +73,7 @@
 <footer class="w3-row-padding footer" >
 	
 	<div class="w3-container w3-blue-grey  w3-center">
-<h5 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022</h5>
+<h6 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022</h6>
 </div>
 </footer>
 </body>

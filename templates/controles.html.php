@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Caso</title>
-	<link rel="stylesheet" type="text/css" href="../estilos/estilo.css">
-<link rel="shortcut icon" type="image/x-icon" href="../public/favicon.ico">
-</head>
-<body>
-	
+		<?php
+session_start();
+?>
 
-		<div>
 
-			<table id="managerTable">
+
+
+    <div class="w3-responsive">
+
+			<table class="w3-table-all w3-tiny" id="managerTable">
 				<tbody>
 	<thead>
   <tr>
@@ -54,7 +50,7 @@
    
     </tr>
   <?php endforeach; ?>
-  <h2>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?> </h2>
+  <h4>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp; <button type="submit" formaction="nominal.php">Vovler</button>  </h4>
   
   <?php endif; ?>
   </tbody>
@@ -64,11 +60,4 @@
 </div>
 		
 	
-<footer>
-  
-  <Input type = "button" class="button" value = "Volver al listado" onclick = "window.close ()">
-
- </footer>
-</body>
-</html>
  

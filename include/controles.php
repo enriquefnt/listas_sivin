@@ -1,23 +1,31 @@
 <?php  
-include __DIR__ . '/conecta.php';
+include __DIR__ . '/../include/conecta.php';
+
 ?>
 
 
 <?php
+		$title = 'Controles';
 
-		try {
+try {
 		
+	if (isset($_POST['IdNiño'])){
 			
-			$sql='call MSP_NUTRICION.controlesXcaso(.'.$_POST['IdNiño'].'.);';			
-
+			$sql='call MSP_NUTRICION.controlesXcaso('.$_POST['IdNiño'].');';		
+			$controles = $connect->query($sql);
+			
+		}	
 		
-		$controles = $connect->query($sql);
-	
-				
+		
+		
+		ob_start();
+			include __DIR__ . '/../templates/controles.html.php';
+		$output = ob_get_clean() ;
 			
 		}
 
-			catch (PDOException $e) {
+
+catch (PDOException $e) {
 			$error = 'Error en la base:' . $e->getMessage() . ' en la linea ' .
 			$e->getFile() . ':' . $e->getLine();
 		}
@@ -25,5 +33,6 @@ include __DIR__ . '/conecta.php';
 
 
 	<?php  
-include __DIR__ . '/../templates/controles_caso.html.php';
+include __DIR__ . '/../templates/layout.html.php';
 ?>
+
