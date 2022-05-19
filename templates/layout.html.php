@@ -71,7 +71,7 @@
 <footer class="w3-row-padding footer" >
 	
 	<div class="w3-container w3-blue-grey  w3-center">
-<h3 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022</h3>
+<h5 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022</h5>
 </div>
 </footer>
 </body>

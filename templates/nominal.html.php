@@ -6,7 +6,7 @@ session_start();
 if ($_SESSION['tipo'] == "SI"){
 
 ?>
-
+<br>
 <form action="nominal.php" method="post" >
    <select name="AOP" required="required" id="AOPe">
     <option value=0>Seleccione AOP</option>
@@ -23,15 +23,15 @@ $aop = [];
 <?php
  } 
  else {$aop = [$_SESSION['AOPe'],$_SESSION['nomAOPe']];
+
   ?>
 
-<div>
-
+<div class="w3-responsive">
+<br>
 <form action="nominal.php" method="post" >
-   <select name="AOP" required="required" id="AOPe">
-    <option value=<?=$_SESSION['AOPe'];?>><?=$_SESSION['nomAOPe'] ;?></option>
-<input type="submit" value="Seleccionar" hidden>
-
+<input type="hidden" id="AOPe" name="AOP" value=<?=$_SESSION['AOPe'];?>>
+<input type="submit" value="Listar Nominales de  <?=$_SESSION['nomAOPe'] ;?> ">
+</form>
 
 
 </div>
