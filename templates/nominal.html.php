@@ -60,7 +60,7 @@ $aop = [];
     <th>Z Talla/edad</th>
     <th>Z IMC/edad</th>
     <th>Ver Evolución</th>
-    <th>Clasificacion</th>
+    <th>Clasificación</th>
     <th>Control Médico</th>
     <th>Días sin registros</th>
     <th>Vigilante</th>

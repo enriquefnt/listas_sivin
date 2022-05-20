@@ -1,5 +1,6 @@
 <?php
-//session_start();
+if (empty($_SESSION['name']))
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +24,10 @@
 
 <body class="w3-light-grey">
 <header class="w3-row-padding header w3-blue-grey">
-<h1>Listados de registros de SiViNSalta</h1>
+<h2>Listados de registros de SiViNSalta</h2>
 
 	<p>
-		<?php if ($_SESSION['tipo'] == "NO"){ 
+		<?php if (isset($_SESSION['tipo']) &&$_SESSION['tipo'] == "NO"){ 
 		echo  'Usuario:' ;
 		} else { echo '
 		Administrador:' ;} ?>
@@ -53,6 +54,9 @@
 			<a href="../include/inicio.php" class="w3-bar-item w3-button">Inicio</a>
 			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
 	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte internación</a>
+	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
+		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
+	<?php } ?>	
 			<a href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a></li>
 		
 	</div>

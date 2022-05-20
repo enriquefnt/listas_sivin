@@ -34,7 +34,7 @@ session_start();
 		
 			
 	<?php foreach ($controles as $control): ?>
-  <tr>
+  <tr class="w3-hover-pale-green">
     <td align="center"><?= htmlspecialchars($control['Fecha'], ENT_QUOTES, 'UTF-8'); ?></td>
     
     <td ><?= htmlspecialchars($control['años'] .'A ' . $control['meses'] .'M ' . $control['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
@@ -50,7 +50,7 @@ session_start();
    
     </tr>
   <?php endforeach; ?>
-  <h5>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp;  <input type="button" value="Volver al nominal" onClick="history.go(-1);"> </h5>
+  <h5>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp;  <input type="button" value="Volver al listado" onClick="history.go(-1);"> </h5>
   
   <?php endif; ?>
   </tbody>
