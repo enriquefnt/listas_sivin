@@ -31,13 +31,13 @@
 		} else { echo '
 		Administrador:' ;} ?>
 		<b><?php 
-		if(isset($_SESSION['nomAOPe'])) {
+		if(isset($_SESSION['name'])) {
 			echo $_SESSION['name'];
 		}
 		?></b>
 		
 		<b><?php 
-		if(isset($_SESSION['nombre']) && $_SESSION['tipo'] == "NO") {
+		if(isset($_SESSION['name']) && $_SESSION['tipo'] == "NO") {
 			echo "&nbsp&nbsp	&nbsp	Area Operativa: ";
 			echo $_SESSION['nomAOPe'];
 		}

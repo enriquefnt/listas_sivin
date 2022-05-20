@@ -8,11 +8,11 @@ include __DIR__ . '/../include/funciones.php';
 	$result = findAll($connect, 'AREAS','Ao_Nom');
 try {
 
-		if(isset($_POST['AOP'])){
+		if(isset($_GET['AOP'])){
 
 
 
-		$sql='call MSP_NUTRICION.nominal('.$_POST['AOP'].'); ';			
+		$sql='call MSP_NUTRICION.nominal('.$_GET['AOP'].'); ';			
 
 		//$sql='call MSP_NUTRICION.nominal(8); ';	
 		$casos = $connect->query($sql);

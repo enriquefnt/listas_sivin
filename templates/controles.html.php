@@ -50,7 +50,7 @@ session_start();
    
     </tr>
   <?php endforeach; ?>
-  <h4>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp;  <input type="button" value="Página anterior" onClick="history.go(-1);"> </h4>
+  <h5>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp;   &nbsp;  <input type="button" value="Volver al nominal" onClick="history.go(-1);"> </h5>
   
   <?php endif; ?>
   </tbody>
