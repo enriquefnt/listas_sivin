@@ -22,6 +22,7 @@ if ($_SESSION['tipo']== "SI"){ ?>
 <?php }
 ?>
 <li><b>Parte Internación:</b> Indica en el día seleccionado la lista de casos registrados en internación, con la fecha de ingreso, motivo y fecha de egreso.<br></li>
+<li><b>Actividad Vigilancia:</b> Lista las notificaciones, controles y altas registradas por cada vigilante por mes en el período indicado.<br></li>
 <li><b>Salir:</b> Sale del sistema y desconecta al usuario. Para volver a ingresar debe indicar su nombre de usuario y contraseña.<br></li>
 
 </ul>	
