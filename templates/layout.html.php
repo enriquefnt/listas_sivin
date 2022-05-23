@@ -11,6 +11,10 @@ session_start();
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="../estilos/estilo_layout.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
  <script src="https://kit.fontawesome.com/07598e026b.js" crossorigin="anonymous"></script>
  
  <script
@@ -53,7 +57,9 @@ session_start();
 
 			<a href="../include/inicio.php" class="w3-bar-item w3-button">Inicio</a>
 			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
-	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte internación</a>
+	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte
+	  	 internación</a>
+	  	 <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
 		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
 	<?php } ?>	
