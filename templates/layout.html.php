@@ -1,6 +1,6 @@
 <?php
 if (empty($_SESSION['name']))
-session_start();
+{session_start();}
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +59,7 @@ session_start();
 			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
 	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte
 	  	 internación</a>
+	  	 <a href="../include/paraMCDA.php" class="w3-bar-item w3-button">MCDA</a>
 	  	 <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
 		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
