@@ -4,7 +4,7 @@
 
 <?php $title ="Inicio"?>
 <div class="w3-responsive">
-<h5 align="center">Listados extraídos de los casos registrados en SIViNSalta</h5>
+<h4 align="center">Listas extraídas de  SIViNSalta</h4>
 
 </div>
 <div class="w3-responsive">

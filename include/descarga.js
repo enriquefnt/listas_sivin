@@ -3,5 +3,8 @@
             var wb = XLSX.utils.table_to_book(elt, { sheet: "Nominal" });
             return dl ?
                 XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-                XLSX.writeFile(wb, fn || ('nominalXaop.' + (type || 'xlsx')));
+                XLSX.writeFile(wb, fn || ('DescargaListaSIVIN.' + (type || 'xlsx')));
         }
+
+
+

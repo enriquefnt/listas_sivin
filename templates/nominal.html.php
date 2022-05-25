@@ -46,8 +46,8 @@ $aop = [];
   if ( isset($cuenta) && $cuenta > 0) { ?>
 	
 	<div class="w3-responsive">
-  <table class="w3-table-all w3-tiny" id="managerTable">
-				
+  <table class="w3-table-all w3-tiny"  id="tbl_exporttable_to_xls">
+			<button onclick="ExportToExcel('xlsx')">Descargar Excel</button>	
 	<thead>
   <tr>
   	<th>Último registro</th>
@@ -116,8 +116,10 @@ if(isset($casos)){ ?>
   <h5><?='Area Operativa: '. $caso['AOP'].  ' al día ' . date("d-m-Y ") .' - Total notificados: '. $cuenta; ?></h5>
  <?php } ?>
   </tbody>
+  
 </table>
 	
+  <script type="text/javascript" src="descarga.js"></script> 
 	
 </div>
 

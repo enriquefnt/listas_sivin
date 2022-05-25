@@ -23,7 +23,7 @@ $aop = [];
 ?>
 </select>
 
-<input type="date" name="dia">
+<input type="date" name="dia"   >
 <input type="submit" value="Seleccionar">
 </form>
 <?php
@@ -38,7 +38,7 @@ $aop = [];
     <option value=<?= $_SESSION['AOPe'] ?>></option>
 </select>
 
-<input type="date" name="dia">
+<input type="date" name="dia" >
 <input type="submit" value="Seleccionar Fecha">
 </form>  
 

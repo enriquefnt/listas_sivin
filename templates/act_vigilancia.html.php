@@ -22,7 +22,7 @@ $aop = [];
 ?>
 </select>
 
-<input type="number" name="anio" placeholder="2022"  step="1" min="2016" max="2023">
+<input type="number" name="anio" value="2022"  step="1" min="2016" max="2023">
 <input type="submit" value="Seleccionar Area y Año">
 </form>
 <?php
@@ -37,7 +37,7 @@ $aop = [];
     <option value=<?= $_SESSION['AOPe'] ?>></option>
 </select>
 
-<input type="number" name="anio" placeholder="2022"  step="1" min="2016" max="2023">
+<input type="number" name="anio" value="2022" step="1" min="2016" max="2023">
 <input type="submit" value="Seleccionar Año">
 </form>  
 

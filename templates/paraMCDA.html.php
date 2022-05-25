@@ -77,7 +77,7 @@ if (empty($_SESSION['name']))
   </tr>
   <?php endforeach; ?>
   <?php if(isset($casos)){ ?>
-  <h5><?= 'Listado de casos con Desnutrición Aguda por antropometría mayores de 6 meses  al día ' . date("d-m-Y ") .' - Total de casos: '. $cuenta .'' ;?> </h5> 	 <p><b>	Importante:</b> esta lista considera solo la antropometría, la evaluación de cada caso determinará el requerimiento de MCDA. Asi mismo pueden haber niños notificados que requieran MCDA y no figuren en esta lista (ej. pérdida de peso aguda sin descenso del IMC/Edad por debajo de - 2 Z).  </p>
+  <h5><?= 'Listado de casos con Desnutrición Aguda según antropometría mayores de 6 meses  al día ' . date("d-m-Y ") .' - Total de casos: '. $cuenta .'' ;?> </h5> 	 <p><b>	Importante:</b> esta lista considera solo la antropometría, la evaluación de cada caso determinará el requerimiento de MCDA. Asi mismo pueden haber niños notificados que requieran MCDA y no figuren en esta lista (ej. pérdida de peso aguda sin descenso del IMC/Edad por debajo de - 2 Z).  </p>
 <?php } ?>
   </tbody>
 </table>

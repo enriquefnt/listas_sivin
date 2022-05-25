@@ -14,9 +14,11 @@ if (empty($_SESSION['name']))
 
 <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
- <script src="https://kit.fontawesome.com/07598e026b.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/07598e026b.js" crossorigin="anonymous"></script>
  
+ <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+
  <script
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
