@@ -47,7 +47,10 @@ $aop = [];
 	
 	<div class="w3-responsive">
   <table class="w3-table-all w3-tiny"  id="tbl_exporttable_to_xls">
-			<button onclick="ExportToExcel('xlsx')">Descargar Excel</button>	
+			<button  onclick="ExportToExcel('xlsx')">
+   <i class="fas fa-download"></i>
+   Descargar Excel
+</button>	
 	<thead>
   <tr>
   	<th>Último registro</th>

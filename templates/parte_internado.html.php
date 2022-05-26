@@ -53,7 +53,11 @@ $aop = [];
   if ( isset($cuenta) && $cuenta > 0) { ?>
 
 <div class="w3-responsive">
-  <table class="w3-table-all w3-tiny">
+  <button  onclick="ExportToExcel('xlsx')">
+   <i class="fas fa-download"></i>
+   Descargar xlsx
+</button>
+  <table class="w3-table-all w3-tiny" id="tbl_exporttable_to_xls">
 
         <tbody>
   <thead>
@@ -123,7 +127,8 @@ $date=date_create($_POST['dia']);
 ?>
 
 </tbody>  
-</table>  
+</table> 
+ <script type="text/javascript" src="descarga.js"></script>  
 </div>
 
 
