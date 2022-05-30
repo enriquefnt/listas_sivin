@@ -73,19 +73,23 @@ if (empty($_SESSION['name']))
 
 
 
-<main >	
-	<div  >
+<main class="w3-row-padding table-container">	
+	<div class="w3-container" >
 		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>	
 			<?=$output?>
 	</div>
 
 </main>
 
-<footer  >
-	
-	<div >
-<h6 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022 - v. 1.0 </h6>
-</div>
+<footer class="text-center  bg-light ">
+		<section class="d-flex justify-content-center  p-2 border-bottom" >
+ 			<div class="me-5 d-none d-lg-block">
+			<h6 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022 - v. 1.0 </h6>
+			</div>
+
+
+
+		</section>
 </footer>
 </body>
 <script type="text/javascript">

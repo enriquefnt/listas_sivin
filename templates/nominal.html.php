@@ -51,8 +51,8 @@ $aop = [];
    <i class="fas fa-download"></i>
    Descargar Excel
 </button>	
-	<thead ">
-  <tr ;>
+	<thead >
+  <tr >
   	<th >Último registro </th>
     <th>Nombre</th>
     <th>Edad</th>
