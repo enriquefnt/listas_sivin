@@ -26,7 +26,7 @@ $aop = [];
 
   ?>
 
-<div class="w3-responsive">
+<div >
 <br>
 <form action="nominal.php" method="get" >
 <input type="hidden" id="AOPe" name="AOP" value=<?=$_SESSION['AOPe'];?>>
@@ -45,15 +45,15 @@ $aop = [];
   
   if ( isset($cuenta) && $cuenta > 0) { ?>
 	
-	<div class="w3-responsive">
-  <table class="w3-table-all w3-tiny"  id="tbl_exporttable_to_xls">
+	<div  id="tbl_exporttable_to_xls">
+  <table class="w3-table-all w3-tiny"  >
 			<button  onclick="ExportToExcel('xlsx')">
    <i class="fas fa-download"></i>
    Descargar Excel
 </button>	
-	<thead>
-  <tr>
-  	<th>Último registro</th>
+	<thead ">
+  <tr ;>
+  	<th >Último registro </th>
     <th>Nombre</th>
     <th>Edad</th>
    <th>Domicilio</th>
@@ -80,7 +80,7 @@ $aop = [];
 
   if(isset($casos)){
   foreach ($casos as $caso): ?>
-  <tr class="w3-hover-pale-green">
+  <tr >
     <td><?= htmlspecialchars($caso['Fecha'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['Nombre'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>

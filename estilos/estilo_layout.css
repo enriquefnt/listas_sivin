@@ -1,9 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
+  background-color: coral;
   display: flex;
   flex-direction: column;
-
- 
-  height: 100vh;
+ box-sizing: content-box;
+   height: 100vh;
 }
 
 
@@ -12,6 +19,13 @@ input[type="submit"] {
     display: inline-block;
   position: relative;
 }
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 
 
 .header, .footer {
@@ -52,15 +66,3 @@ input[type="submit"] {
     line-height: 25px;
 }
 
-/*input[type="button"] {
-    display: block;
-    width: 115px;
-    height: 25px;
-    background: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 25px;
-}*/

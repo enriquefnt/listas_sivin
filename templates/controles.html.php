@@ -10,7 +10,7 @@ session_start();
 			<table class="w3-table-all w3-tiny" id="managerTable">
 				<tbody>
 	<thead>
-  <tr>
+  <tr class="w3-blue-grey">
   	<th>Fecha</th> 
     <th>Edad</th> 
      <th>Peso</th> 
@@ -50,14 +50,15 @@ session_start();
    
     </tr>
   <?php endforeach; ?>
+  
+  <input type="button" class="w3-button w3-ripple w3-grey" value="Volver al listado" onClick="history.go(-1);">
+  <?php endif; ?>
+  </tbody>
   <h5>Historial de controles de: <?= htmlspecialchars($control['Nombre'], ENT_QUOTES, 'UTF-8'); ?>  &nbsp; -  &nbsp; Edad Gestacional: <?=$control['EG']?>   &nbsp; 
     Peso al Nacer: <?=$control['pesonac']?>
     &nbsp; 
     Talla al Nacer: <?=$control['tallanac']?>
-  </h5><br> 
-  <input type="button" class="w3-button w3-ripple w3-grey" value="Volver al listado" onClick="history.go(-1);">
-  <?php endif; ?>
-  </tbody>
+  </h5>
 </table>
 	
 	

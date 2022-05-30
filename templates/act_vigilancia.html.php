@@ -59,7 +59,7 @@ $aop = [];
         
         <tbody>
   <thead>
-  <tr>
+  <tr class="w3-blue-grey">
     <th>Area Operativa</th>
     <th>Nombre</th>
     <th>Mes</th>

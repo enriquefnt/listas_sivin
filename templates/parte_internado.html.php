@@ -61,7 +61,7 @@ $aop = [];
 
         <tbody>
   <thead>
-  <tr>
+  <tr class="w3-blue-grey">
     <th>Nombre</th>
     <th>Domicilio</th>
     <th>Ingreso</th>

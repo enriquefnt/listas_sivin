@@ -12,7 +12,7 @@ include __DIR__ . '/../include/conecta.php';
 			<table class="w3-table-all w3-tiny" id="managerTable">
 				<tbody>
 	<thead>
-  <tr>
+  <tr class="w3-blue-grey">
   	<th>Fecha</th>
     <th>Nombre</th>
     <th>Edad</th>

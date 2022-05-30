@@ -8,28 +8,25 @@ if (empty($_SESSION['name']))
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="../estilos/estilo_layout.css">
+	<link rel="stylesheet" type="text/css" href="../estilos/estilo_layout.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
-<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
-   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-   <script src="https://kit.fontawesome.com/07598e026b.js" crossorigin="anonymous"></script>
- 
- <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 
-
- <script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
  <link rel="shortcut icon" type="image/x-icon" href="../public/favicon.ico">
 	<title><?=$title?></title>
 </head>
 
 
-<body class="w3-light-grey">
-<header class="w3-row-padding header w3-blue-grey">
+<body >
+<header >
+	
+<div class="container-fluid  bg-primary text-white">
+
+
 <h2>Listados de registros de SiViNSalta</h2>
 
 	<p>
@@ -51,42 +48,43 @@ if (empty($_SESSION['name']))
 		?></b>
 
 	</p>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark ">
+	
+	<div class="container-fluid">
+		<ul class="navbar-nav bg-primary navbar-dark">
 
-
-
-<div>
-	<div class="w3-bar w3-border w3-light-grey">
-
-			<a href="../include/inicio.php" class="w3-bar-item w3-button">Inicio</a>
-			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
-	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte
-	  	 internación</a>
-	  	 <a href="../include/paraMCDA.php" class="w3-bar-item w3-button">MCDA</a>
-	  	 <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
+		<li class="nav-item">	<a class="nav-link active" href="../include/inicio.php" >Inicio</a></li>
+		<li class="nav-item">	<a class="nav-link active" href="../include/nominal.php" >Nominal</a></li>
+	  <li class="nav-item">	<a class="nav-link active" href="../include/parte_internado.php" >Parte
+	  	 internación</a></li>
+	  <li class="nav-item"> <a class="nav-link active" href="../include/paraMCDA.php" >MCDA</a></li>
+	  <li class="nav-item">	 <a class="nav-link active"href="../include/act_vigilancia.php" >Actividad Vigilancia</a></li>
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
-		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
+		<li class="nav-item"><a class="nav-link" href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
 	<?php } ?>	
-			<a href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a></li>
-		
+		<li class="nav-item">	<a class="nav-link active" href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a></li>
+		</ul>
 	</div>
 	</div>
-</header >
+	
+</nav>
+</header>
 
 
 
 
-<main class="w3-row-padding table-container">	
-	<div class="w3-container" >
+<main >	
+	<div  >
 		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>	
 			<?=$output?>
 	</div>
 
 </main>
 
-<footer class="w3-row-padding footer" >
+<footer  >
 	
-	<div class="w3-container w3-blue-grey  w3-center">
-<h6 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022</h6>
+	<div >
+<h6 > DNyAS - Programa: Observatorio Vigilancia Nutricional - 2022 - v. 1.0 </h6>
 </div>
 </footer>
 </body>
@@ -114,4 +112,8 @@ if (empty($_SESSION['name']))
     });
   }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
 </html>
