@@ -9,7 +9,12 @@ if (empty($_SESSION['name']))
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../estilos/estilo_layout.css">
+	
+<!-- Bootstrap 5 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- datatables -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
 
 
@@ -53,16 +58,16 @@ if (empty($_SESSION['name']))
 	<div class="container-fluid">
 		<ul class="navbar-nav bg-primary navbar-dark">
 
-		<li class="nav-item">	<a class="nav-link active" href="../include/inicio.php" >Inicio</a></li>
-		<li class="nav-item">	<a class="nav-link active" href="../include/nominal.php" >Nominal</a></li>
-	  <li class="nav-item">	<a class="nav-link active" href="../include/parte_internado.php" >Parte
+		<li class="nav-item">	<a class="nav-link " href="../include/inicio.php" ><b>Inicio</b></a></li>
+		<li class="nav-item">	<a class="nav-link " href="../include/nominal.php" ><b>Nominal</b></a></li>
+	  <li class="nav-item">	<a class="nav-link " href="../include/parte_internado.php" ><b>Parte
 	  	 internación</a></li>
-	  <li class="nav-item"> <a class="nav-link active" href="../include/paraMCDA.php" >MCDA</a></li>
-	  <li class="nav-item">	 <a class="nav-link active"href="../include/act_vigilancia.php" >Actividad Vigilancia</a></li>
+	  <li class="nav-item"> <a class="nav-link " href="../include/paraMCDA.php" ><b>MCDA</b></a></li>
+	  <li class="nav-item">	 <a class="nav-link "href="../include/act_vigilancia.php" >Actividad Vigilancia</b></a></li>
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
-		<li class="nav-item"><a class="nav-link" href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
+		<li class="nav-item"><a class="nav-link" href="../include/ultimos.php"class="nav-item"><b>Ultimos Movimientos</b></a></li>
 	<?php } ?>	
-		<li class="nav-item">	<a class="nav-link active" href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a></li>
+		<li class="nav-item">	<a class="nav-link " href="../include/logout.php"class="w3-bar-item w3-button "><b>Salir</b></a></li>
 		</ul>
 	</div>
 	</div>
@@ -74,7 +79,7 @@ if (empty($_SESSION['name']))
 
 
 <main class="w3-row-padding table-container">	
-	<div class="w3-container" >
+	<div class="container-fluid" >
 		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright">&times;</span>	
 			<?=$output?>
 	</div>
@@ -92,32 +97,15 @@ if (empty($_SESSION['name']))
 		</section>
 </footer>
 </body>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('#AOP').val(1);
-    recargarLista();
 
-    $('#AOP').change(function(){
-      recargarLista();
-    });
-  })
-</script>
-<script type="text/javascript">
-  function recargarLista(){
-    $.ajax({
-      type:"POST",
-    //  url:"sectores.php",
-      url:" /../descu/includes/sectores.php"
-
-      data:"areaoperativa=" + $('#AOP').val(),
-      success:function(r){
-        $('#selectsector').html(r);
-      }
-    });
-  }
-</script>
-
+<!-- Bootstrap 5 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
+<!-- jquery -->
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 
 </html>
