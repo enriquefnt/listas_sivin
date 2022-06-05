@@ -14,7 +14,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/jszip-2.5.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-colvis-2.2.3/b-html5-2.2.3/b-print-2.2.3/cr-1.5.6/date-1.1.2/fc-4.1.0/fh-3.2.3/kt-2.7.0/r-2.3.0/rg-1.2.0/rr-1.2.8/sc-2.0.6/sb-1.3.3/sp-2.0.1/sl-1.4.0/sr-1.1.1/datatables.min.js"></script>
 
 
-	<title></title>
+	<title>probandotabla</title>
 </head>
 <body>
 <?php 
@@ -22,7 +22,7 @@
   
   if ( isset($cuenta) && $cuenta > 0) { ?>
 	
-	
+	<div>
   <table id="example" class="table table-sm table-striped table-hover" > >
 			
    
@@ -115,44 +115,29 @@ if(isset($casos)){ ?>
             </tr>
         </tfoot>
     </table>
+</div>
 <script type="text/javascript">
 
 	$(document).ready(function() {
     var table = $('#example').DataTable( {
+       language: {
+            "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+        },
+        dom: "Bfrtip",
         lengthChange: false,
-        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
-    } );
+        paging: false,
+        scrollY: "600px",
+       scrollCollapse: false,
+
+        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ],
+  }
+
+    );
  
     table.buttons().container()
         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
 } );</script>
 
-<script type="text/javascript">
 
-var table = $('#example').DataTable({
-    language: {
-        "decimal": "",
-        "emptyTable": "No hay información",
-        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-        "infoPostFix": "",
-        "thousands": ",",
-        "lengthMenu": "Mostrar _MENU_ Entradas",
-        "loadingRecords": "Cargando...",
-        "processing": "Procesando...",
-        "search": "Buscar:",
-        "zeroRecords": "Sin resultados encontrados",
-        "paginate": {
-            "first": "Primero",
-            "last": "Ultimo",
-            "next": "Siguiente",
-            "previous": "Anterior"
-        }
-    },
-    ....
-});
-
-</script>
 </body>
 </html>
