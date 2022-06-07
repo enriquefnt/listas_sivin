@@ -110,7 +110,7 @@ $aop = [];
 
 if (isset($_POST['dia']) && isset($cuenta) && $cuenta > 0) { ?>
 
-  <h4><?='Sala: '.$internado['Sala']. ' &nbsp;&nbsp;&nbsp;&nbsp; Fecha: ' .$internado['Fecha'] . ' &nbsp;&nbsp;&nbsp;&nbsp; Total internados: '. $cuenta ; ?></h4>
+  <h5><?='Sala: '.$internado['Sala']. ' &nbsp;&nbsp;&nbsp;&nbsp; Fecha: ' .$internado['Fecha'] . ' &nbsp;&nbsp;&nbsp;&nbsp; Total internados: '. $cuenta ; ?></h5>
 
 <?php 
 
@@ -118,7 +118,7 @@ if (isset($_POST['dia']) && isset($cuenta) && $cuenta > 0) { ?>
 $date=date_create($_POST['dia']);
 
   ?>
- <h4><?='Sin Internados el día ' . date_format($date,"d/m/Y") . ' en el Area Operativa n° '. $_POST['AOP']; ?></h4>
+ <h5><?='Sin Internados el día ' . date_format($date,"d/m/Y") . ' en el Area Operativa n° '. $_POST['AOP']; ?></h5>
 <?php 
  
 

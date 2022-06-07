@@ -21,7 +21,7 @@ try {
 }
 ob_start();
 
-	include __DIR__ . '/../templates/nominal.html.php';
+	include __DIR__ . '/../templates/otraprueba.html.php';
 
 $output = ob_get_clean() ;
 

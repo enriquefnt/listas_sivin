@@ -13,7 +13,7 @@
 
 Opciones del menú:<br><br>
 <li><b>Inicio:</b> Esta pantalla.<br></li>
-<li><b><a href="../include/nominal.php" class="w3-bar-block">Nominal:</a></b> Listado  de los casos registrados en el sistema del área operativa correspondiente al usuario logueado. Indicando la fecha de notificación o último control, su edad, domicilio antropometría, clasificación, días sin registros, nombre del vigilante y demora en la notificación. Tiene un enlace a "Ver Controles" que muestra el historial de controles, con la fecha, antropometría y clasificación.<br></li>
+<li><b><a href="../include/nominal.php" class="w3-bar-block">Nominal:</a></b> Listado  de los casos registrados en el sistema del área operativa correspondiente al usuario logueado indicando la fecha de notificación o último control, edad, domicilio antropometría, clasificación, días sin registros, nombre del vigilante y demora en la notificación. Tiene un enlace a "Ver Controles" que muestra el historial de controles, con la fecha,edad, antropometría y clasificación.<br></li>
 
 <?php 
 if ($_SESSION['tipo']== "SI"){ ?>
