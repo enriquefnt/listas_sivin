@@ -5,11 +5,11 @@ session_start();
 <body>
 <?php 
 
-if ($_SESSION['tipo'] == "SI"){
+if ($_SESSION['tipo'] == "SI" && empty($cuenta) ){
 
 ?>
 
-<form action="nominal.php" method="get" >
+<form action="nominal.php" method="get" id="box">
    <select name="AOP" required="required" id="AOPe">
     <option value=0>Seleccione AOP</option>
 
@@ -20,11 +20,11 @@ $aop = [];
   }
 ?>
 </select>
-<input type="submit" value="Seleccionar">
+<button type="submit" id="btn" >Selecccionar</button>
 </form>
 <?php
  } 
- else {$aop = [$_SESSION['AOPe'],$_SESSION['nomAOPe']];
+ else if (empty($cuenta)) {$aop = [$_SESSION['AOPe'],$_SESSION['nomAOPe']];
 
   ?>
 
@@ -32,9 +32,10 @@ $aop = [];
 
 <form action="nominal.php" method="get" >
 <input type="hidden" id="AOPe" name="AOP" value=<?=$_SESSION['AOPe'];?>>
-<input type="submit" value="Listar Nominales de  <?=$_SESSION['nomAOPe'] ;?> ">
-</form>
 
+<!--<input type="submit" value="Listar Nominales de  <?=$_SESSION['nomAOPe'] ;?>  "> -->
+<button type="submit" >Listar Nominales de  <?=$_SESSION['nomAOPe'] ;?></button>
+</form>
 
 </div>
 
@@ -53,7 +54,7 @@ $aop = [];
    
   <thead >
   <tr >
-    <th>Último registro </th>
+    <th class="nosort">Último registro </th>
     <th>Nombre</th>
     <th>Edad</th>
    <th>Domicilio</th>

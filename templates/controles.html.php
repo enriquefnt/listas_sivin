@@ -12,7 +12,7 @@ session_start();
 				
 	<thead>
   <tr >
-  	<th>Fecha</th> 
+  	<th class="nosort">Fecha</th> 
     <th>Edad</th> 
      <th>Peso</th> 
       <th>Talla</th> 

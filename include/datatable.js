@@ -207,10 +207,10 @@ $(document).ready(function() {
     "decimal": ".",
     "emptyTable": "No hay datos disponibles en la tabla",
     "zeroRecords": "No se encontraron coincidencias",
-    "info": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
-    "infoEmpty": "Mostrando 0 a 0 de 0 entradas",
-    "infoFiltered": "(Filtrado de _MAX_ total de entradas)",
-    "lengthMenu": "Mostrar _MENU_ entradas",
+    "info": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+    "infoEmpty": "Mostrando 0 a 0 de 0 registros",
+    "infoFiltered": "(Filtrado de _MAX_ total de registros)",
+    "lengthMenu": "Mostrar _MENU_ registros",
     "stateRestore": {
         "removeTitle": "Eliminar",
         "creationModal": {
@@ -219,11 +219,13 @@ $(document).ready(function() {
     }
 } 
         },
-        dom: "Bfrtip",
+        dom:  "<'row'<'col-sm-12 col-md-6'B><'col-sm-12 col-md-6'f>>" +
+"<'row'<'col-sm-12'tr>>" +
+"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
         lengthChange: true,
         paging: false,
         fixedHeader: true,
-        scrollY: "250px",
+        scrollY: "270px",
         scrollCollapse: false,
         responsive: true,
         order: [],
@@ -239,3 +241,14 @@ $(document).ready(function() {
     table.buttons().container()
         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
 } );
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
+  // 👇️ hide button
+  btn.style.display = 'none';
+
+  // 👇️ hide div
+  const box = document.getElementById('box');
+  box.style.display = 'none';
+});
