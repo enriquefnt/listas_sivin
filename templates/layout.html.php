@@ -74,6 +74,8 @@ if (empty($_SESSION['name']))
 			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
 	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte
 	  	 internación</a>
+	  	 <a href="../include/resu_mes.php" class="w3-bar-item w3-button">Resumen
+	  	 internación</a>
 	  	 <a href="../include/paraMCDA.php" class="w3-bar-item w3-button">MCDA</a>
 	  	 <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
