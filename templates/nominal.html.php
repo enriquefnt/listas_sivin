@@ -33,7 +33,7 @@ $aop = [];
 <form action="nominal.php" method="get" >
 <input type="hidden" id="AOPe" name="AOP" value=<?=$_SESSION['AOPe'];?>>
 
-<!--<input type="submit" value="Listar Nominales de  <?=$_SESSION['nomAOPe'] ;?>  "> -->
+
 <button type="submit" >Listar Nominales de  <?=$_SESSION['nomAOPe'] ;?></button>
 </form>
 

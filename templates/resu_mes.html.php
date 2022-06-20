@@ -7,12 +7,11 @@ session_start();
 if ($_SESSION['tipo'] == "SI"){
 
 setlocale(LC_TIME, 'spanish.UTF-8');
-$date = "2017-03-25"; //es el campo que viene de MySQl aaaa-mm-dd
-echo strftime("%A, %d de %B, %G", strtotime($date));
+
 ?>
 
 
-<form action="resu_mes.php" method="post" >
+<form action="resu_mes.php" method="post" id="box" >
    <select name="AOP" required="required" id="AOPe">
     <option value=0>Seleccione AOP</option>
 
@@ -35,7 +34,7 @@ $aop = [];
 
  else { ?>
 
-<form action="resu_mes.php" method="post" >
+<form action="resu_mes.php" method="post"  >
 
 <select hidden name="AOP" required="required" id="AOPe">
     <option value=<?= $_SESSION['AOPe'] ?>></option>
@@ -57,15 +56,16 @@ $aop = [];
 
 <div class="w3-responsive">
   
-  <table class="w3-table-all w3-tiny" >
+  <table class="w3-table-all w3-tiny" id="example">
 
-        <tbody>
+       
   <thead>
   <tr class="w3-blue-grey">
   	<th>Día</th>
     <th>Ingresos</th>
     <th>Altas</th>
     <th>Internados</th>
+    <th>Parte diario</th>
    </tr>
   </thead>
 
@@ -86,20 +86,33 @@ $aop = [];
 
   setlocale(LC_TIME, 'spanish.UTF-8');
   if ( isset($total_dias) && $total_dias > 0) {
-
+ $totalAlta=0;
+ $totalIngresos=0;
+ $total_pac_cama=0;
 
   foreach ($dias_mes as $el_dia): 
 
-$dia_f=date_create($el_dia['Dia']);
-
+$totalAlta=$totalAlta+$el_dia['Altas'];
+$totalIngresos=$totalIngresos+$el_dia['Ingresos'];
+$total_pac_cama=$total_pac_cama+$el_dia['Internados'];
   	?>
   <tr class="w3-hover-pale-green">
 
    
-  	<td><?= strftime("%A %d",strtotime($el_dia['Dia'])); ?></td>
+  	<td><?= strftime("%a %d",strtotime($el_dia['Dia'])); ?></td>
     <td><?= htmlspecialchars($el_dia['Ingresos'], ENT_QUOTES, 'UTF-8'); ?></td>
     <td><?= htmlspecialchars($el_dia['Altas'], ENT_QUOTES, 'UTF-8'); ?></td>
     <td><?= htmlspecialchars($el_dia['Internados'], ENT_QUOTES, 'UTF-8'); ?></td>
+
+<td align="center">
+
+        <div>
+        <form action="parte_internado.php" method="post">
+        <input type="hidden" name="IdNiño" value=<?= htmlspecialchars($el_dia['Dia'], ENT_QUOTES, 'UTF-8'); ?>>
+                        <button class="btn btn-default" type="submit"><i class="far fa-eye  fa-lg"></i></button>
+        </form>
+        </div>
+  </td>
      
    </tr>
 
@@ -118,7 +131,13 @@ setlocale(LC_TIME, 'spanish.UTF-8');
 $date=date_create($_POST['dia'])
 	?>
 
-  <h5><?=  ' &nbsp;&nbsp;&nbsp;&nbsp; Total dias del mes: '. $total_dias . ' &nbsp;&nbsp;&nbsp;&nbsp; Mes: ' . strftime("%B, %G",strtotime($_POST['dia'])) ?></h5>
+  <h5><?=  ' &nbsp;&nbsp;&nbsp;&nbsp; Total dias del mes: '. $total_dias . ' &nbsp;&nbsp;&nbsp;&nbsp; Mes: ' . strftime("%B, %G",strtotime($_POST['dia']))
+. ' &nbsp;&nbsp;Altas: '  .$totalAlta 
+.' &nbsp;&nbsp;Ingresos: '  .$totalIngresos
+. '&nbsp;&nbsp;Total Pacientes-cama: '.  $total_pac_cama;
+
+
+   ?></h5>
 
 <?php 
 
