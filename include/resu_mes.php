@@ -6,9 +6,9 @@ setlocale(LC_ALL, 'es_ES');
  $result = findAll($connect, 'AREAS','Ao_Nom');
 
    try {
-     if (isset($_POST['AOP'])&&isset($_POST['dia'])) {
+     if (isset($_GET['AOP'])&&isset($_GET['dia'])) {
       
-      $sql='call MSP_NUTRICION.res_men("'.$_POST['dia'].'",'.$_POST['AOP'].')';
+      $sql='call MSP_NUTRICION.res_men("'.$_GET['dia'].'",'.$_GET['AOP'].')';
 
       $dias_mes = $connect->query($sql);
 

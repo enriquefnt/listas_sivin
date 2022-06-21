@@ -11,7 +11,7 @@ setlocale(LC_TIME, 'spanish.UTF-8');
 ?>
 
 
-<form action="resu_mes.php" method="post" id="box" >
+<form action="resu_mes.php" method="get" id="box" >
    <select name="AOP" required="required" id="AOPe">
     <option value=0>Seleccione AOP</option>
 
@@ -26,7 +26,7 @@ $aop = [];
 </select>
 
 <input type="date" name="dia"   >
-<input type="submit" value="Indicar primer día del mes">
+<button type="submit" id="btn" value="Indicar primer día del mes"></button>
 </form>
 <?php
  } 
@@ -34,7 +34,7 @@ $aop = [];
 
  else { ?>
 
-<form action="resu_mes.php" method="post"  >
+<form action="resu_mes.php" method="get"  >
 
 <select hidden name="AOP" required="required" id="AOPe">
     <option value=<?= $_SESSION['AOPe'] ?>></option>
@@ -107,7 +107,7 @@ $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
 <td align="center">
 
         <div>
-        <form action="parte_internado.php" method="post">
+        <form action="parte_internado.php" method="get">
         <input type="hidden" name="IdNiño" value=<?= htmlspecialchars($el_dia['Dia'], ENT_QUOTES, 'UTF-8'); ?>>
                         <button class="btn btn-default" type="submit"><i class="far fa-eye  fa-lg"></i></button>
         </form>
@@ -126,12 +126,12 @@ $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
 
 <?php 
 
-if (isset($_POST['dia']) && isset($total_dias) && $total_dias > 0) { 
+if (isset($_GET['dia']) && isset($total_dias) && $total_dias > 0) { 
 setlocale(LC_TIME, 'spanish.UTF-8');
-$date=date_create($_POST['dia'])
+$date=date_create($_GET['dia'])
 	?>
 
-  <h5><?=  ' &nbsp;&nbsp;&nbsp;&nbsp; Total dias del mes: '. $total_dias . ' &nbsp;&nbsp;&nbsp;&nbsp; Mes: ' . strftime("%B, %G",strtotime($_POST['dia']))
+  <h5><?=  ' &nbsp;&nbsp;&nbsp;&nbsp; Total dias del mes: '. $total_dias . ' &nbsp;&nbsp;&nbsp;&nbsp; Mes: ' . strftime("%B, %G",strtotime($_GET['dia']))
 . ' &nbsp;&nbsp;Altas: '  .$totalAlta 
 .' &nbsp;&nbsp;Ingresos: '  .$totalIngresos
 . '&nbsp;&nbsp;Total Pacientes-cama: '.  $total_pac_cama;
@@ -145,7 +145,7 @@ $date=date_create($_POST['dia'])
 
 
   ?>
- <h5><?='Sin Internados el mes ' . date_format($date,"m/Y") . ' en el Area Operativa n° '. $_POST['AOP']; ?></h5>
+ <h5><?='Sin Internados el mes ' . date_format($date,"m/Y") . ' en el Area Operativa n° '. $_GET['AOP']; ?></h5>
 <?php 
  
 
