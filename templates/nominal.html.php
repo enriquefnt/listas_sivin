@@ -56,8 +56,8 @@ $aop = [];
   <tr >
     <th class="nosort">Último registro </th>
     <th>Nombre</th>
-    <th>Edad (Al último control)</th>
-    <th>Edad (Al día de hoy)</th>
+    <th>Edad (Último control)</th>
+    <th>Edad (Hoy)</th>
    <th>Domicilio</th>
     <th>Tipo</th>
     <th>Motivo de notificación</th>
