@@ -72,19 +72,25 @@ if (empty($_SESSION['name']))
 
 			<a href="../include/inicio.php" class="w3-bar-item w3-button">Inicio</a>
 			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
-	  	<a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte
-	  	 internación</a>
-	  	 <a href="../include/resu_mes.php" class="w3-bar-item w3-button">Resumen
-	  	 internación</a>
-	  	 <a href="../include/paraMCDA.php" class="w3-bar-item w3-button">MCDA</a>
+	  		 <a href="../include/paraMCDA.php" class="w3-bar-item w3-button">MCDA</a>
 	  	 <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
-		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a></li>
+		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a>
 	<?php } ?>	
-			<a href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a></li>
-		
-	</div>
-	</div>
+	
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-light-grey">Internacion</button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte diario</a>
+      <a href="../include/resu_mes.php" class="w3-bar-item w3-button">Resumen Mensual</a>
+     </div>
+
+  </div>
+  <a href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a>
+</div>
+
+
+	
 </header >
 
 

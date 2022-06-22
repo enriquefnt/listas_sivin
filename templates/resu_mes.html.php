@@ -6,12 +6,12 @@ session_start();
 
 if ($_SESSION['tipo'] == "SI"){
 
-setlocale(LC_TIME, 'spanish.UTF-8');
-
+//setlocale(LC_TIME, 'spanish.UTF-8');
+setlocale(LC_ALL, '');
 ?>
 
 
-<form action="resu_mes.php" method="get" id="box" >
+<form action="resu_mes.php" method="get"  >
    <select name="AOP" required="required" id="AOPe">
     <option value=0>Seleccione AOP</option>
 
@@ -26,7 +26,7 @@ $aop = [];
 </select>
 
 <input type="date" name="dia"   >
-<button type="submit" id="btn" value="Indicar primer día del mes"></button>
+<button type="submit" id="box" value="Indicar primer día del mes">Indicar primer día del mes</button>
 </form>
 <?php
  } 
@@ -36,12 +36,12 @@ $aop = [];
 
 <form action="resu_mes.php" method="get"  >
 
-<select hidden name="AOP" required="required" id="AOPe">
+<select hidden name="AOP" required="required" >
     <option value=<?= $_SESSION['AOPe'] ?>></option>
 </select>
 
 <input type="date" name="dia" >
-<input type="submit" value="Indicar primer día del mes">
+<input type="submit" id="btn" value="Indicar primer día del mes">
 </form>  
 
 
@@ -123,7 +123,7 @@ $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
 } 
   
     ?>
-
+</tbody>
 <?php 
 
 if (isset($_GET['dia']) && isset($total_dias) && $total_dias > 0) { 
@@ -153,7 +153,7 @@ $date=date_create($_GET['dia'])
 }  
 ?>
 
-</tbody>  
+  
 </table> 
  <script type="text/javascript" src="descarga.js"></script>  
 </div>
