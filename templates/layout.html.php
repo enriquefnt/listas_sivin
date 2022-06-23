@@ -73,7 +73,7 @@ if (empty($_SESSION['name']))
 			<a href="../include/inicio.php" class="w3-bar-item w3-button">Inicio</a>
 			<a href="../include/nominal.php" class="w3-bar-item w3-button">Nominal</a>
 	  		 <a href="../include/paraMCDA.php" class="w3-bar-item w3-button">MCDA</a>
-	  	 <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
+	  	 
 	<?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "SI"){ ?>
 		<a href="../include/ultimos.php"class="w3-bar-item w3-button ">Ultimos Movimientos</a>
 	<?php } ?>	
@@ -86,6 +86,7 @@ if (empty($_SESSION['name']))
      </div>
 
   </div>
+  <a href="../include/act_vigilancia.php" class="w3-bar-item w3-button">Actividad Vigilancia</a>
   <a href="../include/logout.php"class="w3-bar-item w3-button ">Salir</a>
 </div>
 

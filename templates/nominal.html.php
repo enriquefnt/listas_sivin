@@ -58,6 +58,7 @@ $aop = [];
     <th>Nombre</th>
     <th>Edad (Último control)</th>
     <th>Edad (Hoy)</th>
+    <th>Responsable</th>
    <th>Domicilio</th>
     <th>Tipo</th>
     <th>Motivo de notificación</th>
@@ -87,6 +88,7 @@ $aop = [];
    <td><?= htmlspecialchars($caso['Nombre'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['años'] .'A ' . $caso['meses'] .'M ' . $caso['dias'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['añosr'] .'A ' . $caso['mesesr'] .'M ' . $caso['diasr'] .'D ', ENT_QUOTES, 'UTF-8'); ?></td>
+   <td><?= htmlspecialchars($caso['Responsable'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['Domicilio'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['Tipo'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?= htmlspecialchars($caso['MotNom'], ENT_QUOTES, 'UTF-8'); ?></td>

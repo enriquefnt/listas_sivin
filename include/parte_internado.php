@@ -5,9 +5,9 @@ include __DIR__ . '/../include/funciones.php';
  $result = findAll($connect, 'AREAS','Ao_Nom');
 
    try {
-     if (isset($_POST['AOP'])&&isset($_POST['dia'])) {
+     if (isset($_GET['AOP'])&&isset($_GET['dia'])) {
       
-      $sql='call Parte_internados("'.$_POST['dia'].'",'.$_POST['AOP'].')';
+      $sql='call Parte_internados("'.$_GET['dia'].'",'.$_GET['AOP'].')';
 
       $internados = $connect->query($sql);
 
