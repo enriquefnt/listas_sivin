@@ -4,7 +4,7 @@ session_start();
 
 <?php 
 
-if ($_SESSION['tipo'] == "SI"){
+if ($_SESSION['tipo'] == "SI" ){
 
 //setlocale(LC_TIME, 'spanish.UTF-8');
 setlocale(LC_ALL, '');
@@ -12,7 +12,7 @@ setlocale(LC_ALL, '');
 
 
 <form action="resu_mes.php" method="get"  >
-   <select name="AOP" required="required" id="AOPe">
+   <select name="AOP" required="required" >
     <option value=0>Seleccione AOP</option>
 
 
@@ -25,7 +25,7 @@ $aop = [];
 ?>
 </select>
 
-<input type="date" name="dia"   >
+<input type="date" name="dia" method="get"   >
 <button type="submit" id="box" value="Indicar primer día del mes">Indicar primer día del mes</button>
 </form>
 <?php
@@ -108,7 +108,8 @@ $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
 
         <div>
         <form action="parte_internado.php" method="get">
-        <input type="hidden" name="IdNiño" value=<?= htmlspecialchars($el_dia['Dia'], ENT_QUOTES, 'UTF-8'); ?>>
+        <input type="hidden" name="dia" value=<?= htmlspecialchars($el_dia['Dia'], ENT_QUOTES, 'UTF-8'); ?>>
+        <input type="hidden" name="AOP" value=<?= htmlspecialchars($_GET['AOP'], ENT_QUOTES, 'UTF-8'); ?>>
                         <button class="btn btn-default" type="submit"><i class="far fa-eye  fa-lg"></i></button>
         </form>
         </div>
@@ -126,7 +127,8 @@ $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
 </tbody>
 <?php 
 
-if (isset($_GET['dia']) && isset($total_dias) && $total_dias > 0) { 
+if (isset($_GET['dia']) && isset($total_dias) && $total_dias > 0 
+  && $total_pac_cama > 0) { 
 setlocale(LC_TIME, 'spanish.UTF-8');
 $date=date_create($_GET['dia'])
 	?>
@@ -141,11 +143,11 @@ $date=date_create($_GET['dia'])
 
 <?php 
 
-}  else if(isset($_POST['dia'])) { 
+}  else if (isset($_GET['dia'])) { 
 
 
   ?>
- <h5><?='Sin Internados el mes ' . date_format($date,"m/Y") . ' en el Area Operativa n° '. $_GET['AOP']; ?></h5>
+ <h5><?='Sin Internados el mes ' . strftime("%B, %G",strtotime($_GET['dia'])) . ' en el Area Operativa n° '. $_GET['AOP']; ?></h5>
 <?php 
  
 

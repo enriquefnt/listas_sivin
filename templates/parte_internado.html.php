@@ -1,10 +1,10 @@
 <?php
 session_start();
 ?>
-
+<input type="button" class="w3-button w3-ripple w3-grey" value="Volver al resumen" onClick="history.go(-1);">
 <?php 
 
-if ($_SESSION['tipo'] == "SI"){
+if ($_SESSION['tipo'] == "SI" && is_null($_GET['dia'])){
 
 ?>
 
@@ -30,7 +30,7 @@ $aop = [];
  } 
 
 
- else { ?>
+ else if(is_null($_GET['dia'])){ ?>
 
 <form action="parte_internado.php" method="get" >
 
@@ -43,9 +43,9 @@ $aop = [];
 </form>  
 
 
-<?php } ?>
 
-<br>
+
+<?php } ?>
 
 <?php 
 
