@@ -11,7 +11,7 @@ session_start();
 			<table id="example" class="w3-table-all w3-tiny" >
 				
 	<thead>
-  <tr >
+  <tr class="w3-blue-grey">
   	<th class="nosort">Fecha</th> 
     <th>Edad</th> 
      <th>Peso</th> 

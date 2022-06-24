@@ -53,7 +53,7 @@ $aop = [];
       
    
   <thead >
-  <tr >
+  <tr class="w3-blue-grey">
     <th class="nosort">Último registro </th>
     <th>Nombre</th>
     <th>Edad (Último control)</th>

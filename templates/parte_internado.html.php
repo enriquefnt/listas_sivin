@@ -1,10 +1,10 @@
 <?php
 session_start();
 ?>
-<input type="button" class="w3-button w3-ripple w3-grey" value="Volver al resumen" onClick="history.go(-1);">
+
 <?php 
 
-if ($_SESSION['tipo'] == "SI" && is_null($_GET['dia'])){
+if ($_SESSION['tipo'] == "SI" && !isset($_GET['dia'])){
 
 ?>
 
@@ -30,7 +30,7 @@ $aop = [];
  } 
 
 
- else if(is_null($_GET['dia'])){ ?>
+ else if(!isset($_GET['dia'])){ ?>
 
 <form action="parte_internado.php" method="get" >
 
@@ -117,7 +117,7 @@ $aop = [];
 
 if (isset($_GET['dia']) && isset($cuenta) && $cuenta > 0) { ?>
 
-  <h5><?='Sala: '.$internado['Sala']. ' &nbsp;&nbsp;&nbsp;&nbsp; Fecha: ' .$internado['Fecha'] . ' &nbsp;&nbsp;&nbsp;&nbsp; Total internados: '. $cuenta ; ?></h5>
+  <h6><?='Sala: '.$internado['Sala']. ' &nbsp;&nbsp;&nbsp;&nbsp; Fecha: ' .$internado['Fecha'] . ' &nbsp;&nbsp;&nbsp;&nbsp; Total internados: '. $cuenta ; ?></h6>
 
 <?php 
 
@@ -135,10 +135,10 @@ $date=date_create($_GET['dia']);
 
 </tbody>  
 </table> 
- 
+<div>
+ <button type="button"   onClick="history.back();"><i class="far fa-eye  fa-lg"></button>
 </div>
-
-
+</div>
 
 
 
