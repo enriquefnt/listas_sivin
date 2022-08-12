@@ -136,7 +136,7 @@ $date=date_create($_GET['dia']);
 </tbody>  
 </table> 
 <div>
- <button type="button"   onClick="history.back();"><i class="far fa-eye  fa-lg"></button>
+ <button type="button"   onClick="history.back();">Volver</button>
 </div>
 </div>
 

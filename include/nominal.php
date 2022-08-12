@@ -14,7 +14,7 @@ try {
 
 		$sql='call MSP_NUTRICION.nominal('.$_GET['AOP'].'); ';			
 
-		//$sql='call MSP_NUTRICION.nominal(8); ';	
+		
 		$casos = $connect->query($sql);
 		$cuenta = $casos->rowCount();
 		
