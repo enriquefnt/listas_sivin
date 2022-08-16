@@ -62,8 +62,9 @@ $aop = [];
     <th>Nombre</th>
     <th>Domicilio</th>
     <th>Ingreso</th>
-    <th>Motivo</th>
+    <th>Motivo Ingreso</th>
     <th>Egreso</th>
+    <th>Motivo Egreso</th>
     <th>Estado</th>    
     <th>Evolución</th>
   </tr>
@@ -94,6 +95,7 @@ $aop = [];
     <td><?= htmlspecialchars($internado['Ingreso'], ENT_QUOTES, 'UTF-8'); ?></td>
      <td><?= htmlspecialchars($internado['Motivo'], ENT_QUOTES, 'UTF-8'); ?></td>
     <td><?= htmlspecialchars($internado['Alta'], ENT_QUOTES, 'UTF-8'); ?></td>
+    <td><?= htmlspecialchars($internado['MotivoAlta'], ENT_QUOTES, 'UTF-8'); ?></td>
         <td><?= htmlspecialchars($internado['Estado'], ENT_QUOTES, 'UTF-8'); ?></td>
     </td>
     <td align="center">
