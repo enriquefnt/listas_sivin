@@ -52,7 +52,7 @@ $aop = [];
 <?php 
 
   
-  if ( isset($total_dias) && $total_dias > 0) { ?>
+  if ( isset($total_dias) && $total_dias  ) { ?>
 
 <div class="w3-responsive">
   
@@ -85,13 +85,13 @@ $aop = [];
   <?php 
 
   setlocale(LC_TIME, 'spanish.UTF-8');
-  if ( isset($total_dias) && $total_dias > 0) {
+  if ( isset($total_dias) && $total_dias ) {
  $totalAlta=0;
  $totalIngresos=0;
  $total_pac_cama=0;
-
+  $date_now = new DateTime();
   foreach ($dias_mes as $el_dia): 
-
+if ( $date_now > $el_dia['Dia']){
 $totalAlta=$totalAlta+$el_dia['Altas'];
 $totalIngresos=$totalIngresos+$el_dia['Ingresos'];
 $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
@@ -118,7 +118,7 @@ $total_pac_cama=$total_pac_cama+$el_dia['Internados'];
    </tr>
 
   <?php 
-   
+   }
   endforeach; 
 
 } 

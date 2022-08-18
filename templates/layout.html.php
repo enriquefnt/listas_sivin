@@ -83,6 +83,7 @@ if (empty($_SESSION['name']))
     <div class="w3-dropdown-content w3-bar-block w3-border">
       <a href="../include/parte_internado.php" class="w3-bar-item w3-button">Parte diario</a>
       <a href="../include/resu_mes.php" class="w3-bar-item w3-button">Resumen Mensual</a>
+      <a href="../include/periodo_internados.php" class="w3-bar-item w3-button">Lista por período</a>
      </div>
 
   </div>
