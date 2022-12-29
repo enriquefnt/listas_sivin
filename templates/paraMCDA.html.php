@@ -8,8 +8,8 @@ if (empty($_SESSION['name']))
 ?>
 	
 	<div class="w3-responsive">
-			<table class="w3-table-all w3-tiny" id="managerTable" >
-				<tbody>
+			<table id="example" class="w3-table-all w3-tiny"  >
+				
 	<thead>
   <tr class="w3-blue-grey">
   	<th>Fecha</th>
