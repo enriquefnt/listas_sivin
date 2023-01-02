@@ -8,9 +8,9 @@ include __DIR__ . '/../include/conecta.php';
 
 	
 	<div class="w3-responsive">
-		<h4>Últimos movimientos en el sistema.</h4>
-			<table class="w3-table-all w3-tiny" id="managerTable">
-				<tbody>
+		<h5>Últimos movimientos en el sistema (30 días).</h5>
+			<table id="example" class="w3-table-all w3-tiny">
+				
 	<thead>
   <tr class="w3-blue-grey">
   	<th>Fecha</th>
