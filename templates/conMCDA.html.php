@@ -18,6 +18,7 @@ if (empty($_SESSION['name']))
     <?php if ($_SESSION['Tipo']="SI") { ?>
     <th>Area</th>
     <?php  } ?>
+    <th>Clasificacion X Antropometría</th>
     <th>Observacion</th>
     
     <th>Ver Evolución</th>
@@ -43,7 +44,7 @@ if (empty($_SESSION['name']))
      <?php if ($_SESSION['Tipo']="SI") { ?>
     <td><?= htmlspecialchars($caso['AOP'], ENT_QUOTES, 'UTF-8'); ?></td>
     <?php  } ?>
-    
+    <td><?=  htmlspecialchars($caso['Clacificación'], ENT_QUOTES, 'UTF-8'); ?></td>
    <td><?=  htmlspecialchars($caso['OBS1'], ENT_QUOTES, 'UTF-8'); ?></td>
 
     <td align="center">
